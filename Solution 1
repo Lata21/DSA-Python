@@ -1,0 +1,13 @@
+def fun(num):
+    index = 0 
+    for i in range(len(num)):
+        if num[i] !=0:
+            num[i],num[index] = num[index], num[i]
+            index +=1
+n1=[0,1,0,3,12]
+fun(n1)
+print(n1)
+
+n2=[0]
+fun(n2)
+print(n2)
