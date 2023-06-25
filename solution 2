@@ -1,0 +1,21 @@
+def firstunique(s):
+    char_freq = {}
+    
+    for char in s:
+        char_freq[char] = char_freq.get(char, 0) + 1
+    
+    for i, char in enumerate(s):
+        if char_freq[char] == 1:
+            return i
+    return -1
+# case 1
+s1 = "leetcode"
+print(firstunique(s1)) 
+
+#  case 2
+s2 = "loveleetcode"
+print(firstunique(s2))  
+
+# case 3
+s3 = "aabb"
+print(firstunique(s3)) 
